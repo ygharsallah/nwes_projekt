@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Animation Controller</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Animation Controller</h1>
+      <button id="upload" type="button">Upload</button>
+    </header>
+
+    <section class="card">
+      <h2>Setup</h2>
+      <div class="row">
+        <div>
+          <label for="count">Number of LEDs</label>
+          <input id="count" type="number" min="1" max="64" value="30">
+        </div>
+        <div>
+          <label for="time">Frame time</label>
+          <div class="unit">
+            <input id="time" type="number" min="20" max="60000" value="500">
+            <span>ms</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="head">
+        <h2>Frame <b id="number">01</b> <span class="muted">/ <b id="total">03</b></span></h2>
+        <div class="nav">
+          <button id="prev" aria-label="Previous frame">‹</button>
+          <button id="next" aria-label="Next frame">›</button>
+        </div>
+      </div>
+      <div class="strip" id="strip"></div>
+    </section>
+
+    <section class="card">
+      <div class="head">
+        <h2>Frames</h2>
+        <button id="add">Add frame</button>
+      </div>
+      <div class="frames" id="frames"></div>
+    </section>
+
+    <section class="card">
+      <div class="head">
+        <h2>LED <b id="lednum">01</b></h2>
+        <span class="dot" id="dot"></span>
+      </div>
+      <label>Color</label>
+      <div class="wheel-info">
+        <div class="wheel-wrap">
+          <canvas class="wheel" id="wheel" width="220" height="220" aria-label="Choose LED color"></canvas>
+          <span class="wheel-marker" id="wheelMarker"></span>
+        </div>
+      </div>
+      <label class="toggle">
+        LED enabled
+        <span class="switch">
+          <input id="enabled" type="checkbox" checked>
+          <i></i>
+        </span>
+      </label>
+      <button class="wide" id="all">Use this color for all LEDs</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
