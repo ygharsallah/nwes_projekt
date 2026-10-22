@@ -1,5 +1,5 @@
 #include "network/network_manager.h"
-#include "config/app_config.h"
+#include "config.h"
 #include <WiFi.h>
 
 bool NetworkManager::setup() {

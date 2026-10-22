@@ -2,7 +2,7 @@
 
 #include <stdint.h>
 #include <stddef.h>
-#include "config/app_config.h"
+#include "config.h"
 
 struct AnimationFrame {
     uint32_t colors[Config::MAX_LEDS] = {};

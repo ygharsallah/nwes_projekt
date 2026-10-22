@@ -1,5 +1,5 @@
 #include "graphics/neopixel_renderer.h"
-#include "config/app_config.h"
+#include "config.h"
 
 NeoPixelRenderer::NeoPixelRenderer()
     : strip_(Config::MAX_LEDS, Config::LED_PIN, NEO_GRB + NEO_KHZ800) {}

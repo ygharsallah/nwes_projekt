@@ -19,6 +19,7 @@ void setup() {
         Serial.println("Wi-Fi setup failed");
         return;
     }
+    
     webServer.setup();
 }
 
